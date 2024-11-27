@@ -258,10 +258,6 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "status": {
-                      "type": "string",
-                      "description": "Status of the snapshot"
-                    },
                     "data": {
                       "type": "array",
                       "items": {
@@ -372,6 +368,166 @@
                             "type": "string",
                             "format": "uri",
                             "description": "URL that link directly to the LinkedIn profile"
+                          },
+                          "people_also_viewed": {
+                            "type": "array",
+                            "description": "Provides a list of LinkedIn profiles that users who have viewed the user's profile, have viewed these as well",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "educations_details": {
+                            "type": "string",
+                            "description": "Provides information about the user's educational background"
+                          },
+                          "education": {
+                            "type": "array",
+                            "description": "Provides information about the user's educational background. It typically includes the degree, the start and end year, the field, etc.",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "degree": {
+                                  "type": "string",
+                                  "description": "Degree"
+                                },
+                                "start_year": {
+                                  "type": "string",
+                                  "description": "Start year"
+                                },
+                                "end_year": {
+                                  "type": "string",
+                                  "description": "End year"
+                                },
+                                "field": {
+                                  "type": "string",
+                                  "description": "Field of study"
+                                }
+                              }
+                            }
+                          },
+                          "recommendations_count": {
+                            "type": "number",
+                            "description": "A numeric count of the total number of recommendations that the user has received"
+                          },
+                          "avatar": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL that link to the profile picture of the LinkedIn user"
+                          },
+                          "courses": {
+                            "type": "array",
+                            "description": "Contains information about courses or educational programs that the user has undertaken",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "languages": {
+                            "type": "array",
+                            "description": "Contains information about the user's proficiency in different languages",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "certifications": {
+                            "type": "array",
+                            "description": "Licenses & Certifications",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "recommendations": {
+                            "type": "array",
+                            "description": "Recommendations that the user has received from their connections or colleagues on LinkedIn",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "volunteer_experience": {
+                            "type": "array",
+                            "description": "Contains information related to the user's volunteer work",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "followers": {
+                            "type": "number",
+                            "description": "How many users/companies following the profile"
+                          },
+                          "connections": {
+                            "type": "number",
+                            "description": "How many connections the profile has"
+                          },
+                          "current_company_company_id": {
+                            "type": "string",
+                            "description": "The id of the latest/current company of the profile"
+                          },
+                          "current_company_name": {
+                            "type": "string",
+                            "description": "The name of the latest/current company of the profile"
+                          },
+                          "publications": {
+                            "type": "array",
+                            "description": "Publications",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "patents": {
+                            "type": "array",
+                            "description": "Patents",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "projects": {
+                            "type": "array",
+                            "description": "Projects",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "organizations": {
+                            "type": "array",
+                            "description": "Organizations",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "location": {
+                            "type": "string",
+                            "description": "Geographical location of the user"
+                          },
+                          "input_url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "The URL that was entered when starting the scraping process"
+                          },
+                          "linkedin_id": {
+                            "type": "string",
+                            "description": "LinkedIn ID"
+                          },
+                          "activity": {
+                            "type": "array",
+                            "description": "Any activity the user has regarding posts",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "linkedin_num_id": {
+                            "type": "string",
+                            "description": "LinkedIn numeric ID"
+                          },
+                          "banner_image": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Banner image"
+                          },
+                          "honors_and_awards": {
+                            "type": "array",
+                            "description": "Honors and Awards",
+                            "items": {
+                              "type": "string"
+                            }
                           }
                         }
                       }
@@ -562,10 +718,6 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "status": {
-                      "type": "string",
-                      "description": "Status of the snapshot"
-                    },
                     "data": {
                       "type": "array",
                       "items": {
@@ -573,15 +725,15 @@
                         "properties": {
                           "id": {
                             "type": "string",
-                            "description": "Unique identifier"
+                            "description": "Unique identifier for the company"
                           },
                           "name": {
                             "type": "string",
-                            "description": "The name of the company"
+                            "description": "Name of the company"
                           },
                           "country_code": {
                             "type": "string",
-                            "description": "The country where the company is located or headquartered"
+                            "description": "Country code where the company is located"
                           },
                           "locations": {
                             "type": "array",
@@ -592,30 +744,173 @@
                           },
                           "followers": {
                             "type": "number",
-                            "description": "The number of followers the company has on LinkedIn"
+                            "description": "Number of followers the company has on LinkedIn"
                           },
                           "employees_in_linkedin": {
                             "type": "number",
-                            "description": "The number of employees listed on LinkedIn"
+                            "description": "Number of employees listed on LinkedIn"
                           },
                           "about": {
                             "type": "string",
-                            "description": "A description or summary of the company"
+                            "description": "Description or summary of the company"
                           },
                           "specialties": {
+                            "type": "string",
+                            "description": "List of the company's specializations"
+                          },
+                          "company_size": {
+                            "type": "string",
+                            "description": "Number of employees in the company"
+                          },
+                          "organization_type": {
+                            "type": "string",
+                            "description": "Type of organization"
+                          },
+                          "industries": {
+                            "type": "string",
+                            "description": "Industries to which the company belongs"
+                          },
+                          "website": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Official website of the company"
+                          },
+                          "crunchbase_url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL linking to the company's profile on Crunchbase"
+                          },
+                          "founded": {
+                            "type": "number",
+                            "description": "Year in which the company was founded"
+                          },
+                          "company_id": {
+                            "type": "string",
+                            "description": "Unique identifier for the company"
+                          },
+                          "employees": {
                             "type": "array",
-                            "description": "List of the company's specializations",
+                            "description": "Additional information about the company's employees",
                             "items": {
                               "type": "string"
                             }
                           },
-                          "company_size": {
+                          "headquarters": {
                             "type": "string",
-                            "description": "The number of employees in the company, as reported by the company"
+                            "description": "Location of the company's headquarters"
                           },
-                          "organization_type": {
+                          "image": {
                             "type": "string",
-                            "description": "The type of organization"
+                            "format": "uri",
+                            "description": "URL that links to the banner photo associated with the company's LinkedIn page"
+                          },
+                          "logo": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL that links to the profile picture of the company's LinkedIn page"
+                          },
+                          "similar": {
+                            "type": "array",
+                            "description": "Information about similar companies",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL or link to the company's LinkedIn page"
+                          },
+                          "updates": {
+                            "type": "array",
+                            "description": "Information about the company's most recent posts on LinkedIn",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "slogan": {
+                            "type": "string",
+                            "description": "Company's slogan"
+                          },
+                          "affiliated": {
+                            "type": "array",
+                            "description": "Information about affiliated companies",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "funding": {
+                            "type": "object",
+                            "description": "Information related to the company's financial backing and investments",
+                            "properties": {
+                              "amount": {
+                                "type": "number",
+                                "description": "Funding amount"
+                              },
+                              "currency": {
+                                "type": "string",
+                                "description": "Currency of the funding amount"
+                              }
+                            }
+                          },
+                          "investors": {
+                            "type": "array",
+                            "description": "Information about the company's investors",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "formatted_locations": {
+                            "type": "array",
+                            "description": "Geographical location of the company",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "stock_info": {
+                            "type": "object",
+                            "description": "Information about the company's stock-related data",
+                            "properties": {
+                              "exchange": {
+                                "type": "string",
+                                "description": "Stock exchange where the company is listed"
+                              },
+                              "ticker": {
+                                "type": "string",
+                                "description": "Stock ticker symbol"
+                              }
+                            }
+                          },
+                          "get_directions_url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL of the directions provided by the company on LinkedIn"
+                          },
+                          "description": {
+                            "type": "string",
+                            "description": "Raw description in HTML"
+                          },
+                          "additional_information": {
+                            "type": "string",
+                            "description": "Additional information about the company"
+                          },
+                          "country_codes_array": {
+                            "type": "array",
+                            "description": "Array of all relevant countries the company is located in",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "alumni": {
+                            "type": "number",
+                            "description": "Number of alumni on LinkedIn"
+                          },
+                          "alumni_information": {
+                            "type": "array",
+                            "description": "Information about alumni",
+                            "items": {
+                              "type": "string"
+                            }
                           }
                         }
                       }
