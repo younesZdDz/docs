@@ -1,33 +1,36 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Introduction"
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Welcome to the MyBetterLead API 👋
 
-## Welcome
+MyBetterLead provides a simple yet powerful solution to enhance lead activation.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+Our API is built around REST principles, featuring:
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+- Predictable, resource-oriented URLs
+- JSON-encoded request and response bodies
+- Standard HTTP response codes, authentication methods, and verbs
+- Integrate Reverse Contact into your software to streamline your workflow, transform processes, and save valuable time when searching for someone’s LinkedIn profile.
 
-## Authentication
+<img className="block" src="/images/intro.png" alt="Hero Light" />
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+## Status Codes
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+The MyBetterLead API adheres to standard HTTP response codes to indicate the outcome of API requests:
+
+- 2xx: Successful operations
+- 3xx: Redirections
+- 4xx: Client-side errors, often due to invalid or missing input
+- 5xx: Server-side errors, often due to a problem with the API service
+
+| Code | Name                  | Description                                                                                   |
+| ---- | --------------------- | --------------------------------------------------------------------------------------------- |
+| 200  | OK                    | The request was successful.                                                                   |
+| 400  | Bad Request           | The request was invalid.                                                                      |
+| 401  | Unauthorized          | The request requires authentication.                                                          |
+| 403  | Forbidden             | The server understood the request but refuses to authorize it.                                |
+| 404  | Not Found             | The requested resource was not found.                                                         |
+| 405  | Method Not Allowed    | The request method is not supported for the requested resource.                               |
+| 429  | Too Many Requests     | The client has sent too many requests in a given amount of time.                              |
+| 500  | Internal Server Error | The server encountered an unexpected condition that prevented it from fulfilling the request. |
