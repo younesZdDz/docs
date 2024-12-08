@@ -334,7 +334,7 @@
                                 "type": "string",
                                 "description": "Industry or sector to which the company belongs"
                               },
-                              "url": {
+                              "link": {
                                 "type": "string",
                                 "format": "uri",
                                 "description": "URL link to the company profile"
