@@ -318,11 +318,11 @@
                             "type": "object",
                             "description": "Provides information about the user's current professional position",
                             "properties": {
-                              "company_name": {
+                              "name": {
                                 "type": "string",
                                 "description": "Company name"
                               },
-                              "job_title": {
+                              "title": {
                                 "type": "string",
                                 "description": "Job title"
                               },
@@ -333,6 +333,11 @@
                               "industry": {
                                 "type": "string",
                                 "description": "Industry or sector to which the company belongs"
+                              },
+                              "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "URL link to the company profile"
                               }
                             }
                           },
