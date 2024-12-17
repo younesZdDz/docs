@@ -25,7 +25,7 @@
     }
   ],
   "paths": {
-    "/api/dashboard/find-by-email": {
+    "/api/public/person/search/by-email": {
       "get": {
         "summary": "Find data by email",
         "parameters": [
@@ -120,9 +120,9 @@
         }
       }
     },
-    "/api/dashboard/find-by-person": {
+    "/api/public/person/search/by-name-domain": {
       "get": {
-        "summary": "Find data by person",
+        "summary": "Find data by name and domain",
         "parameters": [
           {
             "name": "first_name",
@@ -235,7 +235,7 @@
         }
       }
     },
-    "/api/dashboard/person/snapshot": {
+    "/api/public/person/snapshot": {
       "get": {
         "summary": "Get person data from snapshot",
         "parameters": [
@@ -609,7 +609,7 @@
         }
       }
     },
-    "/api/dashboard/find-by-company": {
+    "/api/public/company/search": {
       "get": {
         "summary": "Find company data by domain",
         "parameters": [
@@ -704,7 +704,7 @@
         }
       }
     },
-    "/api/dashboard/company/snapshot": {
+    "/api/public/company/snapshot": {
       "get": {
         "summary": "Get person data from snapshot",
         "parameters": [
