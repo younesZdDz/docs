@@ -262,6 +262,10 @@
                       "type": "string",
                       "description": "Status of the request (running or ready)"
                     },
+                    "remaining_credit": {
+                      "type": "number",
+                      "description": "Number of remaining credits"
+                    },
                     "data": {
                       "type": "array",
                       "items": {
@@ -730,6 +734,10 @@
                     "status": {
                       "type": "string",
                       "description": "Status of the request (running or ready)"
+                    },
+                    "remaining_credit": {
+                      "type": "number",
+                      "description": "Number of remaining credits"
                     },
                     "data": {
                       "type": "array",
