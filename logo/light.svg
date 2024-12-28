@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Circular Gradient Background -->
+ <defs>
+  <linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+   <stop offset="0%" stop-color="#2A57E9"/>
+   <stop offset="100%" stop-color="#A633D6"/>
+  </linearGradient>
+ </defs>
+ <!-- Outer Circle -->
+ <!-- Stylized "L" -->
+ <g class="layer">
+  <title>Layer 1</title>
+  <circle cx="100" cy="100" fill="url(#gradient)" id="svg_1" r="100"/>
+  <path d="m105,36l-40,80l0,30l70,0l0,-30l-40,0l20,-40l0,-40l-10,0z" fill="white" id="svg_2"/>
+ </g>
+</svg>

@@ -2,17 +2,17 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "MyBetterLead API Documentation",
   "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#1d3557",
-    "light": "#457b9d",
-    "dark": "#1d3557",
+    "primary": "#2A57E9",
+    "light": "#2A57E9",
+    "dark": "#2A57E9",
     "anchors": {
-      "from": "#1d3557",
-      "to": "#457b9d"
+      "from": "#2A57E9",
+      "to": "#2A57E9"
     }
   },
   "topbarLinks": [],
